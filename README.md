@@ -12,7 +12,25 @@ An **end-to-end data analytics & data science project** on the real
 
 ---
 
+## 🖥️ Dashboard preview
+
+*No setup required to look — these are live screenshots of the Streamlit app. (Run it
+yourself with `streamlit run app/dashboard.py`.)*
+
+| 📊 Overview | 🚚 Delivery Insights |
+|:--:|:--:|
+| ![Overview](reports/screenshots/01_overview.png) | ![Delivery Insights](reports/screenshots/02_delivery.png) |
+| *KPIs, review distribution & top categories* | *The delivery → satisfaction story, by state* |
+
+| 🏅 Seller Trust | ⚠️ Risk Predictor |
+|:--:|:--:|
+| ![Seller Trust](reports/screenshots/03_trust.png) | ![Risk Predictor](reports/screenshots/04_risk.png) |
+| *Searchable Trust Score leaderboard + breakdown* | *Live negative-review probability + SHAP* |
+
+---
+
 ## ✨ Why this stands out on a CV
+
 
 This isn't a one-notebook Titanic clone. It demonstrates the **full analytics + DS stack**
 a hiring manager looks for, on a genuinely relational dataset:

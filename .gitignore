@@ -24,10 +24,12 @@ models/*
 *.keras
 *.h5
 
-# Reports — keep the small EDA figures committed so the EDA report renders on GitHub
+# Reports — keep the small EDA figures + dashboard screenshots committed so they render on GitHub
 reports/figures/*
 !reports/figures/.gitkeep
 !reports/figures/*.png
+# (reports/screenshots/ is committed in full)
+
 
 
 # OS / IDE
