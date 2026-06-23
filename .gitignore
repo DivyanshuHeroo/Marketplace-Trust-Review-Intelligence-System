@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Data (raw CSVs are large; download via scripts/download_data.sh)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.db
+*.sqlite
+
+# Models / artifacts
+models/*
+!models/.gitkeep
+*.joblib
+*.keras
+*.h5
+
+# Reports (regenerated)
+reports/figures/*
+!reports/figures/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Streamlit
+.streamlit/secrets.toml

@@ -1,0 +1,45 @@
+# ──────────────────────────────────────────────────────────────────
+# OlistTrust — central configuration
+# ──────────────────────────────────────────────────────────────────
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  database: data/olist.db
+  models_dir: models
+  figures_dir: reports/figures
+
+# Raw CSV table name -> file (table names used inside SQLite)
+tables:
+  customers: olist_customers_dataset.csv
+  geolocation: olist_geolocation_dataset.csv
+  order_items: olist_order_items_dataset.csv
+  order_payments: olist_order_payments_dataset.csv
+  order_reviews: olist_order_reviews_dataset.csv
+  orders: olist_orders_dataset.csv
+  products: olist_products_dataset.csv
+  sellers: olist_sellers_dataset.csv
+  category_translation: product_category_name_translation.csv
+
+# Target definition for supervised models
+target:
+  # A review is "negative experience" if review_score <= 3
+  negative_score_threshold: 3
+
+# Trust Score weights (must sum to 1.0). Higher = more trustworthy seller.
+trust_score:
+  weights:
+    avg_review_score: 0.30       # mean customer review score
+    on_time_delivery_rate: 0.25  # delivered on/before estimate
+    low_complaint_rate: 0.15     # 1 - share of 1-2 star reviews
+    delivery_speed: 0.15         # faster than estimate (normalized)
+    order_volume: 0.10           # log order count (experience/reliability)
+    cancel_rate_penalty: 0.05    # 1 - cancellation rate
+  grades:
+    - {min: 80, label: "A — Highly trusted"}
+    - {min: 65, label: "B — Trusted"}
+    - {min: 50, label: "C — Mixed"}
+    - {min: 35, label: "D — Risky"}
+    - {min: 0,  label: "F — High risk"}
+
+random_seed: 42
