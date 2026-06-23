@@ -24,9 +24,11 @@ models/*
 *.keras
 *.h5
 
-# Reports (regenerated)
+# Reports — keep the small EDA figures committed so the EDA report renders on GitHub
 reports/figures/*
 !reports/figures/.gitkeep
+!reports/figures/*.png
+
 
 # OS / IDE
 .DS_Store

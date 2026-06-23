@@ -31,7 +31,20 @@ a hiring manager looks for, on a genuinely relational dataset:
 
 ---
 
+## 📈 Visual EDA
+
+**👉 See the full illustrated walkthrough: [`reports/EDA.md`](reports/EDA.md)** — six
+annotated figures telling the marketplace's data story (it renders right here on GitHub).
+
+| | |
+|---|---|
+| ![Delivery vs satisfaction](reports/figures/02_delivery_vs_satisfaction.png) | ![Trust distribution](reports/figures/05_trust_distribution.png) |
+| *Late deliveries crater review scores* | *Seller Trust Score separates good from high-risk sellers* |
+
+---
+
 ## 📊 Headline results
+
 
 * **Late delivery is the #1 driver of dissatisfaction.** Orders delivered *5+ days late*
   average a **1.79★** review with **76.7% negative**, vs **4.31★** for orders that arrive
